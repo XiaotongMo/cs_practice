@@ -1,6 +1,6 @@
 //
 // Created by jasmine mo on 2022/9/3.
-//
+// 原书中的getline与<stdio.h>中的getline重复，故修改为getlines。
 #include <stdio.h>
 #define MAXLINE 1000
 
