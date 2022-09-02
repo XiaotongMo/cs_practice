@@ -1,4 +1,4 @@
-// 编写程序输出字符数大于80的字符串
+// 练习1-17 编写程序输出字符数大于80的字符串
 // Created by jasmine mo on 2022/9/3.
 // 原书中的getline与<stdio.h>中的getline重复，故修改为getlines。
 
