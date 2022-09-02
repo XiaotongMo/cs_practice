@@ -1,6 +1,7 @@
 //
 // Created by jasmine mo on 2022/9/3.
 // 原书中的getline与<stdio.h>中的getline重复，故修改为getlines。
+
 #include <stdio.h>
 #define MAXLINE 1000
 
@@ -8,6 +9,7 @@
 int getlines(char line[], int maxline);
 void copy(char to[], char from[]);
 
+// main()会报错，改写为int main()则不会
 int main()
 {
     int len;
@@ -16,16 +18,18 @@ int main()
     char longest[MAXLINE];
 
     max=0;
-    while((len=getlines(line, MAXLINE))>0)
-        if(len>max){
+    while((len=getlines(line, MAXLINE))>0){
+        if(len>max) {
             max = len;
             copy(longest, line);
         }
-    if(max>0)
+    }
+    if(max>0){
         printf("%s", longest);
+    }
     return 0;
 }
-
+// 函数读取并返回一行字符串
 int getlines(char s[], int lim)
 {
     int c, i;
@@ -40,6 +44,7 @@ int getlines(char s[], int lim)
     return i;
 }
 
+// 函数只执行某个动作，没有返回值
 void copy(char to[], char from[])
 {
     int i;
